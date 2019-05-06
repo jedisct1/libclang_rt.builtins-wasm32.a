@@ -25,3 +25,5 @@ Building an object file or library will work, but building a module will not, du
 You can either recompile `clang_rt` from the `wasi-sdk` repository to get it.
 
 Or directly download that file here: [libclang_rt.builtins-wasm32.a](precompiled/).
+
+It is now also distributed [with the WASI SDK releases](https://github.com/CraneStation/wasi-sdk/releases), as a separate tarball.
