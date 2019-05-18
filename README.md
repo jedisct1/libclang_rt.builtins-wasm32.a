@@ -15,7 +15,7 @@ Its source code can be found here: [WASI sysroot](https://github.com/CraneStatio
 *Now* you should be all set:
 
 ```sh
-clang --target=wasm32-unknown-wasi --sysroot=/opt/wasi-sysroot -Ofast test.c
+clang --target=wasm32-wasi --sysroot=/opt/wasi-sysroot -O2 test.c
 ```
 
 Almost.
