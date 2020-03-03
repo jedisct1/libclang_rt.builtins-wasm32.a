@@ -10,12 +10,12 @@ Unless your WebAssembly application is compute-only, you still need some kind of
 
 [WASI](https://wasi.dev) is the de facto standard, and can be compiled using a stock clang/LLVM 8 or LLVM/9 installation.
 
-Its source code can be found here: [WASI sysroot](https://github.com/CraneStation/wasi-sysroot), and compiles fine even on non-Linux system.
+Its source code can be found here: [WASI libc](https://github.com/WebAssembly/wasi-libc), and compiles fine even on non-Linux system.
 
 *Now* you should be all set:
 
 ```sh
-clang --target=wasm32-wasi --sysroot=/opt/wasi-sysroot -O2 test.c
+clang --target=wasm32-wasi --sysroot=/opt/wasi-libc -O2 test.c
 ```
 
 Almost.
@@ -26,4 +26,4 @@ You can either recompile `clang_rt` from the `wasi-sdk` repository to get it.
 
 Or directly download that file here: [libclang_rt.builtins-wasm32.a](precompiled/).
 
-It is now also distributed [with the WASI SDK releases](https://github.com/CraneStation/wasi-sdk/releases), as a separate tarball.
+It is now also distributed [with the WASI SDK releases](https://github.com/WebAssembly/wasi-sdk/releases), as a separate tarball.
