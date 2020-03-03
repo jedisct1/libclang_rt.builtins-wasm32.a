@@ -10,12 +10,12 @@ Unless your WebAssembly application is compute-only, you still need some kind of
 
 [WASI](https://wasi.dev) is the de facto standard, and can be compiled using a stock clang/LLVM 8 or LLVM/9 installation.
 
-Its source code can be found here: [WASI libc](https://github.com/WebAssembly/wasi-libc), and compiles fine even on non-Linux system.
+Its source code can be found here: [WASI sysroot](https://github.com/WebAssembly/wasi-sdk/releases), and compiles fine even on non-Linux system.
 
 *Now* you should be all set:
 
 ```sh
-clang --target=wasm32-wasi --sysroot=/opt/wasi-libc -O2 test.c
+clang --target=wasm32-wasi --sysroot=/opt/wasi-sysroot -O2 test.c
 ```
 
 Almost.
