@@ -1,6 +1,6 @@
 # libclang_rt.builtins-wasm32.a
 
-LLVM 8 and 9 can compile to WebAssembly out of the box.
+LLVM 8, 9 and 10 can compile to WebAssembly out of the box.
 
 If you are using macOS with Homebrew, or another operating system with up-to-date LLVM packages, you're all set.
 
@@ -8,7 +8,7 @@ Almost.
 
 Unless your WebAssembly application is compute-only, you still need some kind of interface with the system.
 
-[WASI](https://wasi.dev) is the de facto standard, and can be compiled using a stock clang/LLVM 8 or LLVM/9 installation.
+[WASI](https://wasi.dev) is the de facto standard, and can be compiled using a stock clang/LLVM installation.
 
 Its source code can be found here: [WASI sysroot](https://github.com/WebAssembly/wasi-sdk/releases), and compiles fine even on non-Linux system.
 
