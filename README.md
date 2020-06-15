@@ -1,29 +1,31 @@
 # libclang_rt.builtins-wasm32.a
 
-LLVM 8, 9 and 10 can compile to WebAssembly out of the box.
+Starting with version 8, LLVM can compile to WebAssembly out of the box.
 
-If you are using macOS with Homebrew, or another operating system with up-to-date LLVM packages, you're all set.
+If you are using macOS with Homebrew, or any operating system with up-to-date LLVM packages, you're all set.
 
 Almost.
 
-Unless your WebAssembly application is compute-only, you still need some kind of interface with the system.
+Unless your WebAssembly application is compute-only, you still need some kind of interface with the runtime, namely [WASI](https://wasi.dev).
 
-[WASI](https://wasi.dev) is the de facto standard, and can be compiled using a stock clang/LLVM installation.
+In order to do so, you may want to download and extract [`wasi-sysroot`](https://github.com/WebAssembly/wasi-sdk/releases). Note that you don't need `wasi-sdk` if you already have LLVM, only `wasi-sysroot`.
 
-Its source code can be found here: [WASI sysroot](https://github.com/WebAssembly/wasi-sdk/releases), and compiles fine even on non-Linux system.
-
-*Now* you should be all set:
+*Now* you should be all set. Just replace `/opt/wasi-sysroot` with the location you extracted `wasi-sysroot` to.
 
 ```sh
 clang --target=wasm32-wasi --sysroot=/opt/wasi-sysroot -O2 test.c
 ```
 
-Almost.
+Dang. You may see `clang` now complaining about a missing file:
 
-Building an object file or library will work, but building a module will not, due to the `libclang_rt.builtins-wasm32.a` file missing.
+```text
+wasm-ld: error: cannot open .../lib/wasi/libclang_rt.builtins-wasm32.a: No such file or directory
+```
 
-You can either recompile `clang_rt` from the `wasi-sdk` repository to get it.
+The missing `libclang_rt.builtins-wasm32.a` can be obtained by recompiling `clang-rt` from the `wasi-sdk` repository.
 
 Or directly download that file here: [libclang_rt.builtins-wasm32.a](precompiled/).
 
 It is now also distributed [with the WASI SDK releases](https://github.com/WebAssembly/wasi-sdk/releases), as a separate tarball.
+
+Copy `libclang_rt.builtins-wasm32.a` from the tarball into the path expected by `clang`, creating the `lib` and `wasi` directories if necessary, and you'll be all set!
