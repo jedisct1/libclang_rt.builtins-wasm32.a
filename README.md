@@ -1,6 +1,6 @@
 # libclang_rt.builtins-wasm32.a
 
-Starting with version 8, LLVM can compile to WebAssembly out of the box.
+Starting with version 8 (and version 9 if you need WASI), LLVM can compile to WebAssembly out of the box.
 
 If you are using macOS with Homebrew, or any operating system with up-to-date LLVM packages, you're all set.
 
