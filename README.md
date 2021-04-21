@@ -29,3 +29,8 @@ Or directly download that file here: [libclang_rt.builtins-wasm32.a](precompiled
 It is now also distributed [with the WASI SDK releases](https://github.com/WebAssembly/wasi-sdk/releases), as a separate tarball.
 
 Copy `libclang_rt.builtins-wasm32.a` from the tarball into the path expected by `clang`, creating the `lib` and `wasi` directories if necessary, and you'll be all set!
+
+This has been tested with:
+- LLVM 10
+- LLVM 11
+- LLVM 12
