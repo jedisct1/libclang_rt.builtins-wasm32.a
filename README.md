@@ -1,5 +1,16 @@
 # libclang_rt.builtins-wasm32.a
 
+Note: as of 2021, you should probably use the [Zig](https://ziglang.org) SDK instead of this.
+
+The `zig cc` command supports cross-compilation to WASI out of the box, without having to install these
+builtins or the WASI SDK.
+
+```sh
+zig cc --target=wasm32-wasi -shared -Os -o module.wasm module.c
+```
+
+--
+
 Starting with version 8 (and version 9 if you need WASI), LLVM can compile to WebAssembly out of the box.
 
 If you are using macOS with Homebrew, or any operating system with up-to-date LLVM packages, you're all set.
