@@ -45,3 +45,4 @@ This has been tested with:
 - LLVM 10
 - LLVM 11
 - LLVM 12
+- LLVM 13
