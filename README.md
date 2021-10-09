@@ -33,7 +33,7 @@ Dang. You may see `clang` now complaining about a missing file:
 wasm-ld: error: cannot open .../lib/wasi/libclang_rt.builtins-wasm32.a: No such file or directory
 ```
 
-The missing `libclang_rt.builtins-wasm32.a` can be obtained by recompiling `clang-rt` from the `wasi-sdk` repository.
+The missing `libclang_rt.builtins-wasm32.a` can be obtained by recompiling `compiler_rt` from LLVM.
 
 Or directly download that file here: [libclang_rt.builtins-wasm32.a](precompiled/).
 
