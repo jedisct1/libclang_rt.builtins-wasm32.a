@@ -1,6 +1,6 @@
 # libclang_rt.builtins-wasm32.a
 
-Note: as of 2021, you should probably use the [Zig](https://ziglang.org) SDK instead of this.
+Note: as of 2022, you should probably use the [Zig](https://ziglang.org) SDK instead of this.
 
 The `zig cc` command supports cross-compilation to WASI out of the box, without having to install these
 builtins or the WASI SDK.
@@ -46,3 +46,4 @@ This has been tested with:
 - LLVM 11
 - LLVM 12
 - LLVM 13
+- LLVM 14
