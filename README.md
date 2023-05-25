@@ -47,3 +47,6 @@ This has been tested with:
 - LLVM 12
 - LLVM 13
 - LLVM 14
+- LLVM 15
+- LLVM 16
+
