@@ -43,4 +43,5 @@ Copy `libclang_rt.builtins-wasm32.a` from the tarball into the path expected by 
 
 This has been tested with:
 - LLVM 10, 11, 12, 13, 14 (`llvm-10-to-14` folder)
-- LLVM 15, 16 (latest build was made with LLVM 16.0.4)
+- LLVM 15, 16
+- LLVM 17
