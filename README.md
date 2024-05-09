@@ -17,7 +17,7 @@ If you are using macOS with Homebrew, or any operating system with up-to-date LL
 
 Almost.
 
-Unless your WebAssembly application is compute-only, you still need some kind of interface with the runtime, namely [WASI](https://wasi.dev).
+Unless your WebAssembly application is compute-only, you still need some kind of interface with the runtime.
 
 In order to do so, you may want to download and extract [`wasi-sysroot`](https://github.com/WebAssembly/wasi-sdk/releases). Note that you don't need `wasi-sdk` if you already have LLVM, only `wasi-sysroot`.
 
