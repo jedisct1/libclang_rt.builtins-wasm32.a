@@ -45,3 +45,4 @@ This has been tested with:
 - LLVM 10, 11, 12, 13, 14 (`llvm-10-to-14` folder)
 - LLVM 15, 16
 - LLVM 17
+- LLVM 18
