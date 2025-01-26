@@ -6,7 +6,7 @@ The `zig cc` command supports cross-compilation to WASI out of the box, without 
 builtins or the WASI SDK.
 
 ```sh
-zig cc --target=wasm32-wasi -rdyamic -Os -s -o module.wasm module.c
+zig cc --target=wasm32-wasi -rdynamic -Os -s -o module.wasm module.c
 ```
 
 --
