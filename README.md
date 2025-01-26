@@ -46,3 +46,4 @@ This has been tested with:
 - LLVM 15, 16
 - LLVM 17
 - LLVM 18
+- LLVM 19
